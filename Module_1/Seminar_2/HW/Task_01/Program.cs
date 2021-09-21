@@ -8,7 +8,7 @@ namespace Task_01
         {
             double res = 0;
             res = x * (x * (x * (12 * x + 9) - 3) + 2) - 4;
-            return res;
+            return res; 
         }
         static void Main(string[] args)
         {
