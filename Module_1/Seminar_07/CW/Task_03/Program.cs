@@ -1,35 +1,35 @@
 ﻿using System;
 
-// a^a == 0
 namespace Task_03
 {
     class Program
     {
-        public static void Swap(ref int a, ref int b)
+        static double[] Sin1(uint n)
         {
-            (a, b) = (b, a);
-        }
-        
-        static Random s_rnd = new Random();
-        
-        public static void Init(int[] m)
-        {
-            int[] num = new int[100];
-            for (int i = 0; i <= 99; i++)
-                num[i] = i + 1;
-            Array.Sort(num, Shuffler);
-            num[99] = num[98];
-            Swap(ref num[99], ref num[s_rnd.Next(0, 98)]);
+            var series = new double[n];
+            for (var i = 0; i < n; i++)
+                series[i] = Math.Pow(-1, i) / (2 * i + 1);
+            return series;
         }
 
-        public static int Shuffler(int a, int b)
+        static double SinX(double x, double[] sin1)
         {
-            return s_rnd.Next(-1, 2);
+            double sin = 0;
+            for (var i = 0; i < sin1.Length; i++)
+                sin += Math.Pow(x, 2 * i + 1) * sin1[i];
+            return sin;
         }
         
         static void Main(string[] args)
         {
-                
+            var n = uint.Parse(Console.ReadLine());
+            var sin1 = Sin1(n);
+            do
+            {
+                var x = double.Parse(Console.ReadLine());
+                Console.WriteLine(SinX(x, sin1));
+                Console.WriteLine(Math.Sin(x) + "\n");
+            } while (Console.ReadKey().Key != ConsoleKey.Escape);
         }
     }
 }
