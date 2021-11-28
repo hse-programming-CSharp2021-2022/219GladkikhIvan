@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Security;
 using System.Text;
 
 abstract class Person
@@ -47,7 +48,7 @@ class SnowMaiden : Person
 
 class Santa : Person
 {
-    private List<string> sack;
+    public List<string> sack;
 
     public void Request(SnowMaiden snowMaiden, int amount)
     {
@@ -116,23 +117,42 @@ class Program
 
         for (var i = 2; i < n + 2; i++)
             people.Add(new Child(i.ToString()));
-        
-        for (var i = 0; i < n + 2; i++)
-            Console.WriteLine(people[i]);
 
         var rnd = new Random();
 
         santa.Request(snowMaiden, n);
-        for (var i = 0; i < n + 1; i++)
+        while (people.Count > 1 && santa.sack.Count > 0)
         {
             var prob = rnd.Next(0, 101);
             if (prob < 10)
-                santa.Give(people[0]);
+            {
+                try
+                {
+                    santa.Give(people[0]);
+                    Console.WriteLine(people[0]);
+                }
+                catch (ArgumentException)
+                {
+                    people.RemoveAt(0);
+                    break;
+                }
+            }
             else
             {
-                santa.Give(people[i]);
-                santa.Request(snowMaiden, rnd.Next(1, 5));
+                var j = rnd.Next(1, n + 2);
+                try
+                {
+                    santa.Give(people[j]);
+                    Console.WriteLine(people[j]);
+                }
+                catch (ArgumentException)
+                {
+                    people.RemoveAt(j);
+                    n--;
+                }
             }
+            if (people[1] == snowMaiden)
+                santa.Request(snowMaiden, rnd.Next(1, 5));
         }
     }
 }
