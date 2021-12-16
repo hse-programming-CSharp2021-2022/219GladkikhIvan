@@ -1,0 +1,19 @@
+﻿<Window x:Class="Task_01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Task_01"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="556">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="257*"/>
+            <ColumnDefinition Width="543*"/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="TextBox1" HorizontalAlignment="Left" Margin="26,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="307" Height="340" Grid.ColumnSpan="2"/>
+        <Button x:Name="ButtonDisplay" Content="Display" HorizontalAlignment="Left" Margin="188,0,0,0" VerticalAlignment="Center" Height="340" Width="152" Grid.Column="1" Click="ButtonDisplay_Click"/>
+
+    </Grid>
+</Window>
