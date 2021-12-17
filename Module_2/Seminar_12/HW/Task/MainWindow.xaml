@@ -1,0 +1,30 @@
+﻿<Window x:Class="Task.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Task"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid HorizontalAlignment="Center" Background="LightBlue" VerticalAlignment="Center" ShowGridLines="True"
+          Height="250" Width="250">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Slider Grid.Row="1" Grid.Column="1" Name="sliderW" ValueChanged="slider_ValueChanged" Minimum="0"
+            Maximum="200" Orientation="Horizontal" Margin="10"/>
+        <Slider Grid.Row="0" Grid.Column="0" Name="sliderV" Minimum="0"
+            Maximum="200" Orientation="Vertical" ValueChanged="slider_ValueChanged" Margin="10"/>
+        <Canvas Grid.Column="1" Grid.Row="0" Name="canvas" Background="LightYellow">
+            <Polyline x:Name="polyline" Stroke="Black"  StrokeThickness="5" Points=""/>
+        </Canvas>
+        <Button x:Name="buttonClear" Grid.Column="0" Grid.Row="1" Content="X" Click="buttonClear_Click"/>
+    </Grid>
+
+    
+</Window>
