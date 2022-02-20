@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Student>
+  <Name>Adam</Name>
+  <Age>18</Age>
+  <Grades>
+    <item>
+      <subject>Algebra</subject>
+      <grade>3.49</grade>
+    </item>
+    <item>
+      <subject>Programming</subject>
+      <grade>9.5</grade>
+    </item>
+  </Grades>
+</Student>

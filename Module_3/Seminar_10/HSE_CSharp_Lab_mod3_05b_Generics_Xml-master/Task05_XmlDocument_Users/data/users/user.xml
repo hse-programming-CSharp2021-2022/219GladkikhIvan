@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<users>
+  <user name="Bill Gates">
+    <id>1</id>
+    <country>USA</country>
+    <age>66</age>
+  </user>
+  <user name="Larry Page">
+    <id>2</id>
+    <country>USA</country>
+    <age>48</age>
+  </user>
+  <user name="Rabindranath Tagore">
+    <id>3</id>
+    <country>India</country>
+    <age>80</age>
+  </user>
+  <user name="Selma Ottilia Lovisa Lagerlöf">
+    <id>4</id>
+    <country>Sweden</country>
+    <age>80</age>
+  </user>
+</users>
