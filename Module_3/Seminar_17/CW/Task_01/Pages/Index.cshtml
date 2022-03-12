@@ -1,0 +1,15 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<form method="GET" asp-page="Index">
+    @Request.Query["name"]
+    <div class="form-group">
+        <label>Введите имя:</label>
+        <input class="form-control" placeholder="имя" autocomplete="off" name="name" value="@Request.Query["name"]"/>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Отправить</button>
+</form>
