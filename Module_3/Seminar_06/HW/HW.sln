@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task_01", "Task_01\Task_01.csproj", "{7F03B24A-C8AA-4061-A244-7654A2087234}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaneObjects", "PlaneObjects\PlaneObjects.csproj", "{5F4CEE20-7C9E-414C-83B8-B73D64CD9367}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F03B24A-C8AA-4061-A244-7654A2087234}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F03B24A-C8AA-4061-A244-7654A2087234}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F03B24A-C8AA-4061-A244-7654A2087234}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F03B24A-C8AA-4061-A244-7654A2087234}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F4CEE20-7C9E-414C-83B8-B73D64CD9367}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F4CEE20-7C9E-414C-83B8-B73D64CD9367}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F4CEE20-7C9E-414C-83B8-B73D64CD9367}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F4CEE20-7C9E-414C-83B8-B73D64CD9367}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
