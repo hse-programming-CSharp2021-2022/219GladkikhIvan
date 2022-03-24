@@ -64,7 +64,7 @@ namespace Theory
             var myDel6 = myDel + myDel2 + myDel3 + myDel4 + myDel5;
             Console.WriteLine(myDel6(6));
             myDel6 += myDel2;
-            Console.WriteLine(myDel6.Method); =
+            Console.WriteLine(myDel6.Method); 
             Console.WriteLine(myDel6.Target); 
             myDel6 -= myDel2;
         }
